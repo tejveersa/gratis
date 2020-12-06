@@ -20,8 +20,8 @@
 
 <script>
   $(".submit").click(function(){
-    var fname = $(#"fname").val();
-    var lname = $(#"lname").val();
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
                   $.post("action_page.php",
                   {fname: fname, lname: lname},
                   function(response){
