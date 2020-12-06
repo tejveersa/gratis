@@ -10,9 +10,28 @@
   <label for="lname">Gratituity %:</label><br>
   <input type="text" id="lname" name="lname"><br><br>
   <input type="submit" value="Submit">
-</form> 
+</form>
+  
+  <div id="hello"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous">
+</script>
+
+<script>
+  $(".submit").click(function(){
+    var fname = $(#"fname").val();
+    var lname = $(#"lname").val();
+                  $.post("action_page.php",
+                  {fname: fname, lname: lname},
+                  function(response){
+                    $('#hello').html(response);
+                  }
+  });
+</script>
 
   
-
 </body>
 </html>
