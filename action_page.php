@@ -1,9 +1,10 @@
-<html>
-<body>
+<?php
 
-Your subtotal is: <?php echo $_POST["fname"]; ?><br>
-With a gratituity of: <?php echo $_POST["lname"]; ?><br>
-Your total is: <?php echo $_POST["fname"*"lname"]; ?><br>
+$sub_total = $_GET['fname'];
+$gratuity_rate=$_GET['lname'];
+$gratuity=($sub_total*$gratuity_rate)/100;
+$total=$sub_total+$gratuity;
+echo("Gratuity= $ $gratuity ");
+echo("Total= $total");
 
-</body>
-</html>
+?>
